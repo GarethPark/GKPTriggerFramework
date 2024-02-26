@@ -1,5 +1,9 @@
 public virtual class GKPTriggerHandler {
     public virtual void beforeInsert(List<SObject> newRecords) {}
     public virtual void afterInsert(List<SObject> newRecords) {}
-    // Add other trigger context methods as needed
+    public virtual void beforeUpdate(Map<Id, SObject> oldMap, Map<Id, SObject> newMap) {}
+    public virtual void afterUpdate(Map<Id, SObject> oldMap, Map<Id, SObject> newMap) {}
+    public virtual void beforeDelete(Map<Id, SObject> oldMap) {}
+    public virtual void afterDelete(Map<Id, SObject> oldMap) {}
+    public virtual void afterUndelete(List<SObject> restoredRecords) {}
 }
