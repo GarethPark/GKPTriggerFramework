@@ -18,7 +18,7 @@ public with sharing class AccountTriggerHandler extends GKPTriggerHandler {
 
         List<Contact> relatedContacts = [SELECT Id, AccountId FROM Contact WHERE AccountId IN :accountIds];
         for(Contact con : relatedContacts) {
-            con.LastName =+ 'Updated'; // Hypothetical operation
+            con.LastName += 'Updated'; // Hypothetical operation
         }
         // Bulk DML to update Contacts
         update relatedContacts;
