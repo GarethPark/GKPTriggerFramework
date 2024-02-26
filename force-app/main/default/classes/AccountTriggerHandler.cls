@@ -13,7 +13,7 @@ public with sharing class AccountTriggerHandler extends GKPTriggerHandler {
         //Bulk SOQL
         Set<Id> accountIds = new Set<Id>();
         for (Account acc: accounts){
-            accountIds.add(add.Id);
+            accountIds.add(acc.Id);
         }
 
         List<Contact> relatedContacts = [SELECT Id, AccountId FROM Contact WHERE AccountId IN :accountIds];
