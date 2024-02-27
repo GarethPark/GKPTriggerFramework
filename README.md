@@ -15,3 +15,5 @@ TriggerDispatcherBase implements ITriggerDispatcher allow us to only implement t
 If this is the first call in the context then this method will create a new instance of the appropriate handler and execute the mainEntry method. 
 If there is an existing call running on the same context then this method will use the existing handler instance created by the original call and execute the inProgressEntry method.
 
+TriggerParameter - enum of trigger events, lists for trigger parameters (old and new list/maps), object. Constructor to populate.
+
