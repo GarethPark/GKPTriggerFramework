@@ -17,3 +17,4 @@ If there is an existing call running on the same context then this method will u
 
 TriggerParameter - enum of trigger events, lists for trigger parameters (old and new list/maps), object. Constructor to populate.
 
+ITriggerHandler - defines the contract to be implemented by trigger handlers
