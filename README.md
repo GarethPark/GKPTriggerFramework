@@ -13,8 +13,14 @@ TriggerFactory execute method routes to the appropriate method on the dispatcher
 TriggerDispatcherBase implements ITriggerDispatcher allow us to only implement the methods we require. 
 
 If this is the first call in the context then this method will create a new instance of the appropriate handler and execute the mainEntry method. 
-If there is an existing call running on the same context then this method will use the existing handler instance created by the original call and execute the inProgressEntry method.
 
 TriggerParameter - enum of trigger events, lists for trigger parameters (old and new list/maps), object. Constructor to populate.
 
 ITriggerHandler - defines the contract to be implemented by trigger handlers
+
+TriggerHandlerBase - implements ITriggerHandler. Trigger handlers need to implement only the method that they have to
+
+AccountTriggerDispatcher - (example) - provide the dispatching functionality for the trigger actions 
+on the Account object. Will execute AccountBeforeInsertTriggerHandler
+
+AccountBeforeInsertTriggerHandler - Dummy logic to execute before inserting an account
