@@ -20,7 +20,7 @@ ITriggerHandler - defines the contract to be implemented by trigger handlers
 
 TriggerHandlerBase - implements ITriggerHandler. Trigger handlers need to implement only the method that they have to
 
-AccountTriggerDispatcher - (example) - provide the dispatching functionality for the trigger actions 
+AccountTriggerDispatcher - (example) - extends TriggerDispatcherBase - provides the dispatching functionality for the trigger actions 
 on the Account object. Will execute AccountBeforeInsertTriggerHandler
 
 AccountBeforeInsertTriggerHandler - Dummy logic to execute before inserting an account
