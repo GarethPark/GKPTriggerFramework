@@ -1,5 +1,3 @@
-public with sharing class TriggerException {
-    public TriggerException() {
-
-    }
+public class TriggerException extends Exception {
+    
 }
