@@ -2,7 +2,7 @@ public with sharing class TriggerFactory {
 
     public static void createTriggerDispatcher(Schema.SObjectType soType){
 
-        TriggerDispatcher dispatcher = getTriggerDispatcher(soType);
+        ITriggerDispatcher dispatcher = getTriggerDispatcher(soType);
         if (dispatcher == null){
             throw new Exception('No Trigger dispatcher found for object ' + soType);
         }
@@ -49,7 +49,7 @@ public with sharing class TriggerFactory {
         }
 
         Type objectType = Type.forName(dispatchTypeName);
-        ITriggerDispatcher dispatcher = (objType == null) ? null  : (ITriggerDispatcher).objType.newInstance();
+        ITriggerDispatcher dispatcher = (objectType == null) ? null  : (ITriggerDispatcher)objectType.newInstance();
         return dispatcher;
     }
 }
