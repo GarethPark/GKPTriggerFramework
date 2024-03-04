@@ -1,6 +1,6 @@
 public with sharing class AccountAfterInsertTriggerHandler extends TriggerHandlerBase {
     public override void mainEntry(TriggerParameters trigParam) {
-        List<Account> accounts = (List<Account>)newRecords;
+        List<Account> accounts = (List<Account>) trigParam.newList;
         
         //Bulk SOQL
         Set<Id> accountIds = new Set<Id>();
