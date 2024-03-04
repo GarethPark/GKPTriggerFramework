@@ -8,7 +8,7 @@ public with sharing class AccountAfterUpdateTriggerHandler extends TriggerHandle
             accountIds.add(acc.Id);
         }
 
-        List<Contact> relatedContacts = [SELECT Id, AccountId FROM Contact WHERE AccountId IN :accountIds];
+        List<Contact> relatedContacts = [SELECT Id, AccountId, FirstName, LastName FROM Contact WHERE AccountId IN :accountIds];
         for(Contact con : relatedContacts) {
             con.LastName += 'Updated'; // Hypothetical operation
         }
