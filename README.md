@@ -24,3 +24,8 @@ AccountTriggerDispatcher - (example) - extends TriggerDispatcherBase - provides 
 on the Account object. Will execute AccountBeforeInsertTriggerHandler
 
 AccountBeforeInsertTriggerHandler - Dummy logic to execute before inserting an account
+
+
+To run tests;
+
+sfdx force:apex:test:run --testlevel RunLocalTests --codecoverage --resultformat human --targetusername gkps
