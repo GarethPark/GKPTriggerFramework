@@ -1,8 +1,8 @@
 public class AccountBeforeInsertTriggerHandler extends TriggerHandlerBase {
     public override void mainEntry(TriggerParameters trigParam) {
 		for (Account acc : (List<Account>) trigParam.newList){
-            if (acc.Name.contains('inactive')){
-                acc.addError('cannot save inactive accounts');
+            for(Account acc : accounts){
+                acc.Name += ' - Processed';
             }
         }
 	}
