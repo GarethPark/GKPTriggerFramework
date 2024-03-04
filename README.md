@@ -29,3 +29,7 @@ AccountBeforeInsertTriggerHandler - Dummy logic to execute before inserting an a
 To run tests;
 
 sfdx force:apex:test:run --testlevel RunLocalTests --codecoverage --resultformat human --targetusername gkps
+
+with coverage;
+
+sfdx force:apex:test:run --testlevel RunLocalTests -r human -c -u gkps -w 10
