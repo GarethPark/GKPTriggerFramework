@@ -3,9 +3,6 @@
 
 Salesforce Trigger Framework to provide the following capabilities
 
-The Handler class provides a structured way to encapsulate the logic for handling  trigger events, while the Trigger delegates the execution of this logic to the handler class. 
-This separation of concerns makes the trigger logic easier to manage and update, especially as the application grows in complexity.
-
 TriggerFactory creates an instance of the appropriate dispatcher based the object type of the trigger. This is done via creating a new instance based on object type. ITriggerDispatcher interface defines the contract of a dispatcher
 
 TriggerFactory execute method routes to the appropriate method on the dispatcher
