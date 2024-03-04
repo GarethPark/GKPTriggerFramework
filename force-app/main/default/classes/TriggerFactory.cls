@@ -4,7 +4,7 @@ public with sharing class TriggerFactory {
 
         ITriggerDispatcher dispatcher = getTriggerDispatcher(soType);
         if (dispatcher == null){
-            throw new Exception('No Trigger dispatcher found for object ' + soType);
+            throw new TriggerException('No Trigger dispatcher found for object ' + soType);
         }
         execute(dispatcher);
     }
