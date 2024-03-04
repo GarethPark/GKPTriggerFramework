@@ -1,4 +1,4 @@
-public with sharing class AccountTriggerDispatcher {
+public class AccountTriggerDispatcher extends TriggerDispatcherBase {
     private static Boolean isBeforeInsertProcessing = false;
     
     public virtual override void beforeInsert(TriggerParameters trigParam){
